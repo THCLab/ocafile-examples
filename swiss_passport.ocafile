@@ -1,16 +1,19 @@
+--name=VIZDigitalPassport
+--version=1.0
+
 # add attributes (capture base)
 ADD Attribute dateOfBirth=DateTime dateOfExpiry=DateTime dateOfIssue=DateTime
 ADD Attribute documentCode=Text documentNumber=Text documentType=Text
 
 # Multi line support
-ADD Attribute fullName=Text nationality=Text personalNumber=Text \ 
+ADD Attribute fullName=Text nationality=Text personalNumber=Text \
               photoImage=Binary placeOfBirth=Text sex=Text
 
 ADD Attribute issuedBy=Text issuingState=Text issuingStateCode=Text
 ADD Attribute optionalData=Text optionalDocumentData=Text optionalPersonalData=Text \
                 primaryIdentifier=Text secondaryIdentifier=Text signatureImage=Binary
-# TODO add classificaation
-# ADD classification "GICS:45102010"
+
+ADD classification "GICS:45102010"
 
 # Add meta overlay
 ADD Meta fr PROPS name="VIZ pour passeport numérique" description="Un formulaire à utiliser pour capturer les données de la zone d'inspection visuelle pour un passeport numérique"
@@ -21,10 +24,9 @@ ADD Meta en PROPS name="VIZ for Digital Passport" description="A form to be used
 ADD Meta eo PROPS description="Formo por kolekti ciferecajn pasportajn datumojn" name="Cifereca pasporto"
 
 # Add Format overlay
-
 ADD Format ATTRS dateOfBirth="YYnMMnDD" dateOfExpiry="YYnMMnDD" \
-                dateOfIssue="YYnMMnDD" documentCode="P[A-Z0-9]{1}" \ 
-                documentNumber="[A-Z0-9]{9}" issuingStateCode="[A-Z]{3}" \ 
+                dateOfIssue="YYnMMnDD" documentCode="P[A-Z0-9]{1}" \
+                documentNumber="[A-Z0-9]{9}" issuingStateCode="[A-Z]{3}" \
                 personalNumber="[A-Z0-9]{14}" photoImage="image/jpeg" \
                 signatureImage="image/jpeg"
 
@@ -39,6 +41,32 @@ ADD Label fr ATTRS dateOfBirth="Date de naissance" dateOfExpiry="Date d'expirati
     placeOfBirth="Lieu de naissance" primaryIdentifier="Identifiant principal" \
     secondaryIdentifier="Identifiant secondaire" sex="Sexe" \
     signatureImage="Signature du titulaire ou marque usuelle"
+
+
+ADD label en ATTRS dateOfBirth="Date of Birth" dateOfExpiry="Date of Expiry" \
+    dateOfIssue="Date of Issue" documentCode="Document Code" \
+    documentNumber="Document Number" documentType="Document Type" \
+    fullName="Full Name" issuedBy="Issued By" \
+    issuingState="Issuing State" issuingStateCode="Issuing State Code" \
+    nationality="Nationality" optionalData="Optional Data" \
+    optionalDocumentData="Optional Document Data" optionalPersonalData="Optional Personal Data" \
+    personalNumber="Personal Number" photoImage="Photo Image" \
+    placeOfBirth="Place of Birth" primaryIdentifier="Primary Identifier" \
+    secondaryIdentifier="Secondary Identifier" \
+    signatureImage="Signature Image"
+
+ADD label pl ATTRS dateOfBirth="Data urodzenia" dateOfExpiry="Data ważności" \
+    dateOfIssue="Data wydania" documentCode="Kod dokumentu" \
+    documentNumber="Numer dokumentu" documentType="Typ dokumentu" \
+    fullName="Imię i nazwisko" issuedBy="Wydane przez" \
+    issuingState="Wydający" issuingStateCode="Kod wydającego" \
+    nationality="Obywatelstwo" optionalData="Dane opcjonalne" \
+    optionalDocumentData="Opcjonalne dane dokumentu" optionalPersonalData="Opcjonalne dane osobowe" \
+    personalNumber="Numer osobisty" photoImage="Zdjęcie" \
+    placeOfBirth="Miejsce urodzenia" primaryIdentifier="Identyfikator główny" \
+    secondaryIdentifier="Identyfikator" \
+    signatureImage="Zdjęcie podpisu"
+
 
 
 ADD Unit si ATTRS optionalPersonalData=cm
@@ -95,7 +123,7 @@ ADD Information en ATTRS dateOfBirth="Holder’s date of birth as recorded by th
     secondaryIdentifier="Secondary component(s) of the name of the holder as described in Doc 9303-3. The most important component(s) (as determined by the State or organization) of the secondary identifier of the holder shall be inserted in full, up to the maximum dimensions of the field frame. Other components, where necessary, may be represented by initials. Where the holder’s name has only predominant component(s), this data field shall be left blank. A State may optionally utilize the whole zone comprising Fields 06 and 07 as a single field. In such a case, the primary identifier shall be placed first, followed by a comma and a space, followed by the secondary identifier. " \
     sex="Sex of the holder, to be specified by use of the single initial commonly used in the language of the State or organization where the document is issued and, if translation into English, French or Spanish is necessary, followed by an oblique and the capital letter F for female, M for male, or X for unspecified." \
     signatureImage="At the discretion of the issuing State or organization, the signature or usual mark may be located in Zone VI. The size of the field to be allocated to the signature or usual mark on the adjoining page shall be at the discretion of the issuing State or organization, subject to the overall dimensional limits of the MRP. For additional details see Doc 9303-3."
-    
+
 ADD CHARACTER_ENCODING ATTRS dateOfBirth="utf-8" \
     dateOfExpiry="utf-8" \
     dateOfIssue="utf-8" \
