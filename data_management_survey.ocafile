@@ -1,3 +1,4 @@
+--name=DataManagementSurvey
 ADD META en PROPS name="Data Management Survey" description="The Data Management Survey contains questions to assess and organize research data management practices across cardiovascular use cases."
 
 ADD ATTRIBUTE SQLDatabases=Array[Text]
