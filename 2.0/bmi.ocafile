@@ -1,0 +1,16 @@
+--name=patient-bmi
+ADD ATTRIBUTE first_name=Text last_name=Text wgt=Numeric hgt=Numeric
+
+# Add meta data
+ADD Overlay Meta
+  language="en"
+  name="Patient BMI"
+  description="Standard 1 Patient BMI"
+
+# Add character encoding
+ADD Overlay CHARACTER_ENCODING
+  first_name="utf-8"
+  last_name="utf-8"
+  wgt="utf-8"
+  hgt="utf-8"
+

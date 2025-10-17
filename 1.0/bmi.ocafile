@@ -1,0 +1,10 @@
+--name=patient-bmi
+ADD ATTRIBUTE first_name=Text last_name=Text wgt=Numeric hgt=Numeric
+
+# Add meta data
+ADD Meta en PROPS name="Patient BMI"
+ADD Meta en PROPS description="Standard 1 Patient BMI"
+
+# Add character encoding
+ADD CHARACTER_ENCODING ATTRS first_name="utf-8" last_name="utf-8" wgt="utf-8" hgt="utf-8"
+

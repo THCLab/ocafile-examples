@@ -1,0 +1,105 @@
+--name=VIZDigitalPassport
+--version=1.0
+
+# add attributes (capture base)
+ADD Attribute dateOfBirth=DateTime dateOfExpiry=DateTime dateOfIssue=DateTime
+ADD Attribute documentCode=Text documentNumber=Text documentType=Text
+
+
+
+# Multi line support
+ADD Attribute fullName=Text nationality=Text personalNumber=Text \
+              photoImage=Binary placeOfBirth=Text sex=Text
+
+ADD Attribute issuedBy=Text issuingState=Text issuingStateCode=Text
+ADD Attribute optionalData=Text optionalDocumentData=Text optionalPersonalData=Text \
+                primaryIdentifier=Text secondaryIdentifier=Text signatureImage=Binary
+
+# Add meta overlay
+ADD Meta fr PROPS name="VIZ pour passeport numérique" description="Un formulaire à utiliser pour capturer les données de la zone d'inspection visuelle pour un passeport numérique"
+ADD Meta pl PROPS name="Passport cyfrowy" description="Formularz służący do zebrania danych dotyczących paszportu cyfrowego"
+ADD Meta en PROPS name="VIZ for Digital Passport" description="A form to be used for capturing Visual Inspection Zone data for a Digital Passport"
+
+# Order of the props does not have any impact on the final layer SAID
+ADD Meta eo PROPS description="Formo por kolekti ciferecajn pasportajn datumojn" name="Cifereca pasporto"
+
+# Add Format overlay
+ADD Format ATTRS dateOfBirth="YYnMMnDD" dateOfExpiry="YYnMMnDD" \
+                dateOfIssue="YYnMMnDD" documentCode="P[A-Z0-9]{1}" \
+                documentNumber="[A-Z0-9]{9}" issuingStateCode="[A-Z]{3}" \
+                personalNumber="[A-Z0-9]{14}" photoImage="image/jpeg" \
+                signatureImage="image/jpeg"
+
+ADD Label fr ATTRS dateOfBirth="Date de naissance" dateOfExpiry="Date d'expiration" \
+    dateOfIssue="Date d'émission" documentCode="Code du document" \
+    documentNumber="Numéro de passeport" documentType="Document" \
+    fullName="Nom" issuedBy="Autorité ou organisme émetteur" \
+    issuingState="État ou organisme émetteur (au complet)" issuingStateCode="État ou organisme émetteur (en code)" \
+    nationality="Nationalité" optionalData="Éléments de données facultatifs" \
+    optionalDocumentData="Éléments de données de document facultatifs" optionalPersonalData="Éléments de données personnelles facultatifs" \
+    personalNumber="Numéro personnel" photoImage="Caractéristique d'identification" \
+    placeOfBirth="Lieu de naissance" primaryIdentifier="Identifiant principal" \
+    secondaryIdentifier="Identifiant secondaire" sex="Sexe" \
+    signatureImage="Signature du titulaire ou marque usuelle"
+
+
+ADD label en ATTRS dateOfBirth="Date of Birth" dateOfExpiry="Date of Expiry" \
+    dateOfIssue="Date of Issue" documentCode="Document Code" \
+    documentNumber="Document Number" documentType="Document Type" \
+    fullName="Full Name" issuedBy="Issued By" \
+    issuingState="Issuing State" issuingStateCode="Issuing State Code" \
+    nationality="Nationality" optionalData="Optional Data" \
+    optionalDocumentData="Optional Document Data" optionalPersonalData="Optional Personal Data" \
+    personalNumber="Personal Number" photoImage="Photo Image" \
+    placeOfBirth="Place of Birth" primaryIdentifier="Primary Identifier" \
+    secondaryIdentifier="Secondary Identifier" \
+    signatureImage="Signature Image"
+
+ADD label pl ATTRS dateOfBirth="Data urodzenia" dateOfExpiry="Data ważności" \
+    dateOfIssue="Data wydania" documentCode="Kod dokumentu" \
+    documentNumber="Numer dokumentu" documentType="Typ dokumentu" \
+    fullName="Imię i nazwisko" issuedBy="Wydane przez" \
+    issuingState="Wydający" issuingStateCode="Kod wydającego" \
+    nationality="Obywatelstwo" optionalData="Dane opcjonalne" \
+    optionalDocumentData="Opcjonalne dane dokumentu" optionalPersonalData="Opcjonalne dane osobowe" \
+    personalNumber="Numer osobisty" photoImage="Zdjęcie" \
+    placeOfBirth="Miejsce urodzenia" primaryIdentifier="Identyfikator główny" \
+    secondaryIdentifier="Identyfikator" \
+    signatureImage="Zdjęcie podpisu"
+
+
+
+ADD Unit ATTRS optionalPersonalData=cm
+
+
+ADD ENTRY fr ATTRS sex={"F": "Femelle", "M": "Mâle", "X": "Non spécifié"}
+ADD ENTRY fr ATTRS sex={"F": "Female", "M": "Male", "X": "Unspecified"} documentType={"PASSPORT": "Passport"} issuingState=ECfBoOwdcHhQfNtWA5qTKOo9egoxHKXxby6R8Jujpk-o issuingStateCode=EnmO60xL2IsIv-_AC2PgLdJtzqsfuNqa8BihsiNWgz5o nationality=EAr0uvi1743P2VXXqd08a-yX8K_aejHCkdjaW8lWZ_xw
+
+# ENTRY CODE can be a table or Referance (SAID) to the object which stores dictionary with codes
+ADD ENTRY_CODE ATTRS sex=["F", "M", "X"] documentType=["PASSPORT"] issuingState=EWSSp1MZQfVWl-u4l4eDprRp-bLE-xLe0gSTNVwkuqNA issuingStateCode=EWSSp1MZQfVWl-u4l4eDprRp-bLE-xLe0gSTNVwkuqNA nationality=EWSSp1MZQfVWl-u4l4eDprRp-bLE-xLe0gSTNVwkuqNA
+# NOT SUPPORTED YET
+# ADD ENTRY_CODE_MAPPING ATTRS sex={"F":K", "M":"M", "X:unknown"}
+
+ADD CHARACTER_ENCODING ATTRS dateOfBirth="utf-8" \
+    dateOfExpiry="utf-8" \
+    dateOfIssue="utf-8" \
+    documentCode="utf-8" \
+    documentNumber="utf-8" \
+    documentType="utf-8" \
+    fullName="utf-8" \
+    issuedBy="utf-8" \
+    issuingState="utf-8" \
+    issuingStateCode="utf-8" \
+    nationality="utf-8" \
+    optionalData="utf-8" \
+    optionalDocumentData="utf-8" \
+    optionalPersonalData="utf-8" \
+    personalNumber="utf-8" \
+    photoImage="base64" \
+    placeOfBirth="utf-8" \
+    primaryIdentifier="utf-8" \
+    secondaryIdentifier="utf-8" \
+    sex="utf-8" \
+    signatureImage="base64"
+
+ADD SENSITIVE ATTRS dateOfBirth fullName personalNumber
