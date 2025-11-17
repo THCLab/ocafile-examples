@@ -6,7 +6,7 @@ documentNumber=Text \
                sex=Text ocrTextLines=[[ Text ]]
 
 ADD OVERLAY character_encoding
-  attribute_character_encoding
+  attribute_character_encodings
     photoImage="base64"
 
 ADD OVERLAY format
@@ -40,11 +40,11 @@ ADD Overlay standard
     documentNumber="ISO 3166-1 alpha-2"
 
 ADD Overlay cardinality
-  attribute_cardinality
+  attribute_cardinalities
     documentType="1-2"
 
 ADD Overlay conformance
-  attribute_conformance
+  attribute_conformances
     documentType="M"
     fullName="M"
     height="optional"
@@ -76,7 +76,7 @@ ADD Overlay UNIT
     height="cm"
 
 ADD Overlay mapping
-  attribute_mapping
+  attribute_mappings
     dateOfBirth="birth_date"
     documentNumber="document_number"
     documentType="document_type"
@@ -85,7 +85,7 @@ ADD Overlay mapping
     issuingState="issuing_state"
 
 ADD Overlay entry_code_mapping
-  attribute_entry_codes_mapping
+  attribute_entry_codes_mappings
     documentType=["PE:KE", "PM:ZK" ]
 
 ADD overlay sensitive
