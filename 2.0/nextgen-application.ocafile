@@ -45,7 +45,7 @@ ADD Overlay CHARACTER_ENCODING
 
 
 ADD Overlay Entry_Code
-  attribute_entry_codes:
+  attribute_entry_codes
     maturity=["S", "B", "X", "E"]
 
 ADD Overlay Entry
@@ -105,10 +105,9 @@ ADD Overlay Entry
 
 ADD Overlay Label
   language="en"
-  attribute_labels:
+  attribute_labels
     maturity="Maturity"
     description="Description"
-    name="Name"
     author="Author"
     license="License"
     documentation="Documentation"
@@ -117,10 +116,9 @@ ADD Overlay Label
 
 ADD Overlay Label
   language="fr"
-  attribute_labels:
+  attribute_labels
     maturity="Maturité"
     description="Description"
-    name="Nom"
     author="Auteur"
     license="Licence"
     documentation="Documentation"
@@ -129,10 +127,9 @@ ADD Overlay Label
 
 ADD Overlay Label
   language="es"
-  attribute_labels:
+  attribute_labels
     maturity="Madurez"
     description="Descripción"
-    name="Nombre"
     author="Autor"
     license="Licencia"
     documentation="Documentación"
@@ -141,10 +138,9 @@ ADD Overlay Label
 
 ADD Overlay Label
   language="de"
-  attribute_labels:
+  attribute_labels
     maturity="Stabilität"
     description="Beschreibung"
-    name="Name"
     author="Autor"
     license="Lizenz"
     documentation="Dokumentation"
@@ -153,10 +149,9 @@ ADD Overlay Label
 
 ADD Overlay Label
   language="pl"
-  attribute_labels:
+  attribute_labels
     maturity="Dojrzałość"
     description="Opis"
-    name="Nazwa"
     author="Autor"
     license="Licencja"
     documentation="Dokumentacja"
@@ -164,5 +159,5 @@ ADD Overlay Label
     container_digest="Suma kontrolna kontenera"
 
 ADD Overlay Conformance
-  attribute_conformances:
+  attribute_conformance
     maturity="S"
