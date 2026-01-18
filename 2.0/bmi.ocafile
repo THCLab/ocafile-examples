@@ -1,5 +1,7 @@
 --name=patient-bmi
-ADD ATTRIBUTE first_name=Text last_name=Text wgt=Numeric hgt=Numeric
+# from patient.ocafile
+FROM EJnT654wrORxfcNJ1yqVhqd0uRHihOSfepmB0OR1jPxf
+ADD ATTRIBUTE wgt=Numeric hgt=Numeric
 
 # Add meta data
 ADD Overlay Meta
@@ -9,8 +11,7 @@ ADD Overlay Meta
 
 # Add character encoding
 ADD Overlay CHARACTER_ENCODING
-  first_name="utf-8"
-  last_name="utf-8"
-  wgt="utf-8"
-  hgt="utf-8"
+  attribute_character_encodings
+    wgt="utf-8"
+    hgt="utf-8"
 
