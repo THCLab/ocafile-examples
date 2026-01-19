@@ -1,0 +1,18 @@
+-- name=InvoiceWithLineItems
+FROM EMla9w8NDb2RLInJNHEOuPJ4SQ6ifMeh83bTJmxiCeNL
+
+ADD ATTRIBUTE lineItems=[refn:LineItem]
+ADD OVERLAY LABEL
+    language="en"
+    attribute_labels
+        lineItems="Line Items"
+
+ADD OVERLAY LABEL
+    language="pl"
+    attribute_labels
+        lineItems="Pozycje"
+
+ADD OVERLAY CARDINALITY
+    attribute_cardinalities
+        lineItems="1-"
+
