@@ -27,7 +27,7 @@ ADD Overlay META
   name="Studentenausweis"
 
 ADD Overlay CHARACTER_ENCODING
-  attribute_character_encoding
+  attribute_character_encodings
     number="utf-8"
     first_name="utf-8"
     last_name="utf-8"
@@ -38,7 +38,7 @@ ADD Overlay CHARACTER_ENCODING
     id="utf-8"
 
 ADD Overlay CONFORMANCE
-  attribute_conformance
+  attribute_conformances
     number="M"
     first_name="M"
     last_name="M"
@@ -56,7 +56,7 @@ ADD Overlay FORMAT
 
 ADD Overlay LABEL
   language="en"
-  attr_labels
+  attribute_labels
     number="Document number"
     first_name="First name"
     last_name="Last name"
@@ -68,7 +68,7 @@ ADD Overlay LABEL
 
 ADD Overlay LABEL
   language="pl"
-  attr_labels
+  attribute_labels
     number="Numer dokumentu"
     first_name="Imię"
     last_name="Nazwisko"
@@ -80,7 +80,7 @@ ADD Overlay LABEL
 
 ADD Overlay LABEL
   language="fr"
-  attr_labels
+  attribute_labels
     number="Numéro de document"
     first_name="Prénom(s)"
     last_name="Nom de famille"
@@ -92,7 +92,7 @@ ADD Overlay LABEL
 
 ADD Overlay LABEL
   language="es"
-  attr_labels
+  attribute_labels
     number="Número de documento"
     first_name="Nombre(s)"
     last_name="Apellido(s)"
@@ -104,7 +104,7 @@ ADD Overlay LABEL
 
 ADD Overlay LABEL
   language="de"
-  attr_labels
+  attribute_labels
     number="Dokumentnummer"
     first_name="Vorname(n)"
     last_name="Nachname"
@@ -153,14 +153,14 @@ ADD Overlay INFORMATION
 ADD Overlay INFORMATION
   language="es"
     attribute_information
-    number="Identificador único de la tarjeta de estudiante"
-    first_name="Nombre(s) del titular de la tarjeta"
-    last_name="Apellido(s) del titular de la tarjeta"
-    birth_date="Fecha de nacimiento del titular"
-    issue_date="Fecha de emisión de la tarjeta"
-    expiry_date="Fecha de vencimiento de la tarjeta"
-    issuer="Autoridad emisora de la tarjeta"
-    id="Número de identificación"
+      number="Identificador único de la tarjeta de estudiante"
+      first_name="Nombre(s) del titular de la tarjeta"
+      last_name="Apellido(s) del titular de la tarjeta"
+      birth_date="Fecha de nacimiento del titular"
+      issue_date="Fecha de emisión de la tarjeta"
+      expiry_date="Fecha de vencimiento de la tarjeta"
+      issuer="Autoridad emisora de la tarjeta"
+      id="Número de identificación"
 
 ADD Overlay INFORMATION
   language="de"

@@ -33,7 +33,7 @@ ADD OVERLAY META
 
 ADD OVERLAY Label
   language = "en"
-  attributes
+  attribute_labels
     dateOfBirth="Date de naissance"
     dateOfExpiry="Date d'expiration"
     dateOfIssue="Date d'émission"
@@ -58,7 +58,7 @@ ADD OVERLAY Label
 
 ADD Overlay label
   language="en"
-  attributes
+  attribute_labels
     dateOfBirth="Date of Birth"
     dateOfExpiry="Date of Expiry"
     dateOfIssue="Date of Issue"
@@ -82,7 +82,7 @@ ADD Overlay label
 
 ADD overlay label
   language="pl"
-  attributes
+  attribute_labels
     dateOfBirth="Data urodzenia"
     dateOfExpiry="Data ważności"
     dateOfIssue="Data wydania"
@@ -105,37 +105,46 @@ ADD overlay label
     signatureImage="Zdjęcie podpisu"
 
 ADD OVERLAY Format
-  dataOfBirth = "YYMMDD"
-  dataOfExpiry = "YYMMDD"
-  documentNumber = "[A-Z0-9]{9}"
+  attribute_formats
+   dateOfBirth = "YYMMDD"
+   dateOfExpiry = "YYMMDD"
+   documentNumber = "[A-Z0-9]{9}"
 
 ADD Overlay Unit
-  optionalPersonalData="cm"
+  metric_system="si"
+  attribute_units
+    optionalPersonalData="cm"
+
+ADD ATTRIBUTE age=Numeric
 
 ADD OVERLAY Unit
-  age="Y"
-  system="metric"
+  metric_system="si"
+  attribute_units
+    age="Y"
 
 ADD Overlay ENTRY
   language="fr"
-  sex
-   "F"="Femelle"
-   "M"="Mâle"
-   "X"="Non spécifié"
+  attribute_entries
+    sex
+    "F"="Femelle"
+    "M"="Mâle"
+    "X"="Non spécifié"
 
 ADD Overlay ENTRY
   language="fr"
-  sex
-    "F"="Female"
-    "M"="Male"
-    "X"="Unspecified"
-  documentType
-    "PASSPORT"="Passport"
-  issuingState="refs:ECfBoOwdcHhQfNtWA5qTKOo9egoxHKXxby6R8Jujpk-o"
-  issuingStateCode="refs:EnmO60xL2IsIv-_AC2PgLdJtzqsfuNqa8BihsiNWgz5o"
-  nationality="refs:EAr0uvi1743P2VXXqd08a-yX8K_aejHCkdjaW8lWZ_xw"
+  attribute_entries
+    sex
+      "F"="Female"
+      "M"="Male"
+      "X"="Unspecified"
+    documentType
+      "PASSPORT"="Passport"
+    issuingState=refs:ECfBoOwdcHhQfNtWA5qTKOo9egoxHKXxby6R8Jujpk-o
+    issuingStateCode="refs:EnmO60xL2IsIv-_AC2PgLdJtzqsfuNqa8BihsiNWgz5o"
+    nationality='refs:EAr0uvi1743P2VXXqd08a-yX8K_aejHCkdjaW8lWZ_xw'
 
 ADD Overlay CHARACTER_ENCODING
+ attribute_character_encodings
     dateOfBirth="utf-8"
     dateOfExpiry="utf-8"
     dateOfIssue="utf-8"
@@ -160,4 +169,8 @@ ADD Overlay CHARACTER_ENCODING
 
 
 ADD OVERLAY Sensitive
-    "attributes" = ["dateOfBirth" "fullName" "personalNumber"]
+    "attributes" = ["dateOfBirth", "fullName", "personalNumber"]
+
+ADD OVERLAY STANDARD
+  attribute_standards
+    dateOfBirth="ISO 8601"
