@@ -56,30 +56,6 @@ ADD OVERLAY Label
     sex="Sexe"
     signatureImage="Signature du titulaire ou marque usuelle"
 
-ADD Overlay label
-  language="en"
-  attribute_labels
-    dateOfBirth="Date of Birth"
-    dateOfExpiry="Date of Expiry"
-    dateOfIssue="Date of Issue"
-    documentCode="Document Code"
-    documentNumber="Document Number"
-    documentType="Document Type"
-    fullName="Full Name"
-    issuedBy="Issued By"
-    issuingState="Issuing State"
-    issuingStateCode="Issuing State Code"
-    nationality="Nationality"
-    optionalData="Optional Data"
-    optionalDocumentData="Optional Document Data"
-    optionalPersonalData="Optional Personal Data"
-    personalNumber="Personal Number"
-    photoImage="Photo Image"
-    placeOfBirth="Place of Birth"
-    primaryIdentifier="Primary Identifier"
-    secondaryIdentifier="Secondary Identifier"
-    signatureImage="Signature Image"
-
 ADD overlay label
   language="pl"
   attribute_labels

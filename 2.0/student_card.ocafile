@@ -152,7 +152,7 @@ ADD Overlay INFORMATION
 
 ADD Overlay INFORMATION
   language="es"
-    attribute_information
+  attribute_information
       number="Identificador único de la tarjeta de estudiante"
       first_name="Nombre(s) del titular de la tarjeta"
       last_name="Apellido(s) del titular de la tarjeta"

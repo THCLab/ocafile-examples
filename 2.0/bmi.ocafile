@@ -1,11 +1,11 @@
 --name=patient-bmi
 # from patient.ocafile
-FROM EJnT654wrORxfcNJ1yqVhqd0uRHihOSfepmB0OR1jPxf
+FROM refn:patient
 ADD ATTRIBUTE wgt=Numeric hgt=Numeric
 
 # Add meta data
 ADD Overlay Meta
-  language="en"
+  language="engs"
   name="Patient BMI"
   description="Standard 1 Patient BMI"
 

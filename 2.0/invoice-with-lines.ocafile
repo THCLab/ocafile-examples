@@ -1,5 +1,5 @@
 -- name=InvoiceWithLineItems
-FROM EMla9w8NDb2RLInJNHEOuPJ4SQ6ifMeh83bTJmxiCeNL
+FROM refs:EMla9w8NDb2RLInJNHEOuPJ4SQ6ifMeh83bTJmxiCeNL
 
 ADD ATTRIBUTE lineItems=[refn:LineItem]
 ADD OVERLAY LABEL
